@@ -1,0 +1,40 @@
+﻿@model IEnumerable<ControlesEnsalamento.Models.Cursos>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idCurso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeCurso)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCurso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeCurso)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCurso }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCurso }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCurso })
+        </td>
+    </tr>
+}
+
+</table>

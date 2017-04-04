@@ -1,0 +1,27 @@
+﻿@model ControlesEnsalamento.Models.Disciplinas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Disciplinas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoDisciplina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoDisciplina)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idDisciplina }) |
+    @Html.ActionLink("Back to List", "List")
+</p>

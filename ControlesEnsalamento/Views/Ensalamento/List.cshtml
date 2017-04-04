@@ -1,0 +1,82 @@
+﻿@model IEnumerable<ControlesEnsalamento.Models.Ensalamentos>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idSala)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.matriculaProfessor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idDisciplina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idTuma)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.diaDaSemana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.disponibilidadeSala)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.turno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dataFim)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idSala)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.matriculaProfessor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idDisciplina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idTuma)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.diaDaSemana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.disponibilidadeSala)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.turno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dataFim)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idEnsalamento }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idEnsalamento }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idEnsalamento })
+        </td>
+    </tr>
+}
+
+</table>

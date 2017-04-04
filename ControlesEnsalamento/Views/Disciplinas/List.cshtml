@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ControlesEnsalamento.Models.Disciplina>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+  
+    <th>
+         @Html.DisplayNameFor(model => model.idDisciplina)
+     </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.descricaoDisciplinas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+ 
+     <td>
+        @Html.DisplayFor(modelItem => item.idDisciplina)
+    </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.descricaoDisciplinas)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.idDisciplina }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.idDisciplina }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idDisciplina })
+        </td>
+    </tr>
+}
+
+</table>

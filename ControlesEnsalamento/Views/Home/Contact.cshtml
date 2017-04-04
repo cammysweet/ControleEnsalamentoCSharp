@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Consultas de Cadastros";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<<ul class="nav nav-pills nav-stacked">
+    <li role="presentation">@Html.ActionLink("Consulta Cursos", "List", "Cursos")</li>
+    <li role="presentation">@Html.ActionLink("Consulta Disciplinas", "List", "Disciplinas")</li>
+    <li role="presentation">@Html.ActionLink("Consulta estilo de salas", "List", "TipoSalas")</li>
+</ul>

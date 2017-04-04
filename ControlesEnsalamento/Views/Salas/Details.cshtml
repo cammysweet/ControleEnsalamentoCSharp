@@ -1,0 +1,35 @@
+﻿@model ControlesEnsalamento.Models.Salas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Salas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.capacidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capacidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoSala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoSala)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idSala }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

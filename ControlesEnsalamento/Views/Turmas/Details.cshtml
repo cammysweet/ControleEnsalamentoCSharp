@@ -1,0 +1,43 @@
+﻿@model ControlesEnsalamento.Models.Turmas
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Turmas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idCursos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCursos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descricaoTurma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descricaoTurma)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantidadeAlunos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantidadeAlunos)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTurma }) |
+    @Html.ActionLink("Back to List", "List")
+</p>
